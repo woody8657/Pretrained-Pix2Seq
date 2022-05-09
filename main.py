@@ -204,6 +204,7 @@ def main(args):
                          **{f'test_{k}': v for k, v in test_stats.items()},
                          'epoch': epoch,
                          'n_parameters': n_parameters}
+            # TODO: Change the criteria of saving model weights
             cur_ap = test_stats['coco_eval_bbox'][0]
         else:
             log_stats = {**{f'train_{k}': v for k, v in train_stats.items()},
